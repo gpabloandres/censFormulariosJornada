@@ -1,0 +1,83 @@
+
+Analogía para la comprensión del objetivo:
+Diseñar un módulo educativo en EPJA es como construir un kit de supervivencia personalizado para un viaje largo y complejo. No se trata solo de empacar todos los libros de texto (contenido), sino de asegurarse de que el kit sea ligero (flexible y conciso), que incluya un mapa claro (estructura modular), herramientas que realmente sepa usar el viajero (vinculación con saberes previos) y que esté diseñado para enfrentar los desafíos específicos del camino (contexto problematizador). Esta encuesta ayuda a ver qué docentes ya tienen su kit listo y cuáles necesitan más herramientas o entrenamiento para diseñarlo.
+
+Encuesta Diagnóstica Docente: Construcción de Módulos EPJA
+Sección 1: Introducción y Datos (Breve)
+Introducción al Formulario
+Estimado/a docente,
+Esta encuesta ha sido diseñada por el equipo directivo del CENS para diagnosticar nuestro estado de situación respecto a la elaboración de los Módulos Educativos para nuestros estudiantes de Educación Permanente de Jóvenes y Adultos (EPJA).
+Recordemos que, en el marco del Diseño Curricular Modular, estos módulos son unidades curriculares que buscan organizar los procesos de enseñanza y aprendizaje, promoviendo el desarrollo de capacidades específicas y adaptándose a las trayectorias e intereses de nuestros estudiantes.
+La información recopilada será fundamental para la planificación de acciones de apoyo y capacitación específicas. Le pedimos responder con total honestidad.
+
+0. Espacio Curricular / Materia que dicta: (Combobox de opciones)
+
+1. Curso: (Combobox de opciones)
+
+2. Nombre completo del docente: (Respuesta corta)
+Sección 2: Estado de Avance Actual
+(Preguntas para filtrar quiénes iniciaron y quiénes no)
+3. ¿Ha iniciado la construcción o diseño de los módulos correspondientes a su espacio curricular para este ciclo lectivo? (Sí/No con Lógica de Salto)
+Sí (Ir a Pregunta 4)
+No (Ir a Pregunta 5)
+4. (Si respondió "Sí" a la pregunta 3) ¿Qué porcentaje estima haber completado en el diseño de sus módulos? (Opción Múltiple)
+Menos del 25%
+25% - 50%
+51% - 75%
+Más del 75%
+Diseño completo y listo para implementación
+5. (Si respondió "No" a la pregunta 3) ¿Cuál es la principal razón por la que aún no ha comenzado con el diseño? (Opción Múltiple, seleccionar la principal)
+Desconocimiento o falta de claridad en la metodología de diseño modular.
+Falta de tiempo/carga de trabajo.
+Falta de recursos o materiales de apoyo (ej. plantillas, ejemplos).
+Incertidumbre sobre los contenidos prioritarios para la modalidad EPJA.
+Otros (Especifique brevemente): _______________________
+Sección 3: Conocimiento Metodológico
+(Preguntas para medir la autopercepción de idoneidad y conocimiento sobre CÓMO construir los módulos)
+6. ¿Cuán preparado/a se siente para diseñar módulos que integren los componentes curriculares esenciales de la EPJA (contexto problematizador, capacidades específicas, núcleo conceptual)? (Escala de Likert: Autopercepción de idoneidad)
+1 (Muy poco preparado/a)
+2 (Poco preparado/a)
+3 (Medianamente preparado/a)
+4 (Preparado/a)
+5 (Muy preparado/a)
+7. Los diseños curriculares modulares deben considerar la carga de trabajo total del estudiante (horas en clase + horas de trabajo independiente). ¿Sabe cómo estimar esta carga horaria al planificar las actividades de su módulo? (Opción Múltiple)
+Sí, conozco la metodología de estimación de carga horaria.
+Tengo una idea general, pero necesito precisiones metodológicas.
+No, desconozco cómo se realiza esta estimación.
+8. ¿Conoce y aplica metodologías didácticas específicas para la EPJA, como el Aprendizaje Basado en Proyectos (ABP) o la problematización del conocimiento, que deben integrar el diseño modular? (Opción Múltiple)
+Sí, utilizo ABP o problematización como eje central en el diseño.
+Conozco la teoría, pero aún no la he implementado en el diseño curricular modular.
+Necesito capacitación detallada sobre estas metodologías.
+Sección 4: Concepción de los Módulos (Formato, Diseño y Contenido)
+(Preguntas clave sobre qué entienden los docentes por "formato", "diseño" y "contenido prioritario" para esta modalidad)
+9. En cuanto al FORMATO del módulo, ¿cuál de los siguientes enfoques considera más efectivo para fomentar el autoaprendizaje y la flexibilidad en la EPJA? (Opción Múltiple, seleccionar la principal)
+Documento de texto tradicional (PDF/Word) con contenidos secuenciales.
+Material didáctico interactivo/digital (web, cápsulas de video, infografías).
+Cuadernillo de actividades con fuerte componente de autoevaluación y reflexión (similares a los materiales de autoaprendizaje que permiten la autonomía).
+Formato mixto que combine recursos impresos y digitales.
+10. Respecto al DISEÑO PEDAGÓGICO, ¿cuál considera que es el principal valor agregado que debe tener un módulo para un estudiante de EPJA? (Opción Múltiple, seleccionar la principal)
+Ofrecer una secuencia lineal y completa de contenidos disciplinares.
+Articular los contenidos con la experiencia laboral y los saberes previos del estudiante.
+Priorizar la formación técnica por sobre la formación humanística.
+Priorizar la adquisición de un título habilitante sobre el desarrollo de capacidades.
+11. ¿Qué importancia le asigna a la inclusión de Ejes Transversales (como Educación Sexual Integral o Educación y Prevención sobre Adicciones) en el diseño de los contenidos de su módulo? (Escala de Likert: Importancia del Contenido)
+1 (Ninguna importancia)
+2 (Poca importancia)
+3 (Importancia moderada)
+4 (Importante)
+5 (Fundamental)
+12. (Respuesta Corta) Describa brevemente qué entiende por "Contenido Prioritario" para la elaboración de su módulo en el contexto de la EPJA: (Busca validar si el concepto se enfoca en el desarrollo de capacidades, la contextualización o la terminalidad, en lugar del enciclopedismo).
+
+Sección 5: Necesidades y Apoyo
+(Preguntas para detectar qué tipo de capacitación o recursos necesitarían)
+13. Marque los tipos de apoyo o recursos que considera más necesarios para finalizar o mejorar el diseño de sus módulos: (Opción Múltiple, seleccionar todos los que apliquen)
+Asesoramiento metodológico individualizado (ej. tutoría de diseño instruccional).
+Talleres de capacitación sobre estrategias didácticas específicas para EPJA (ej. Aprendizaje Basado en Proyectos, Estudio de Casos).
+Acceso a ejemplos o plantillas de módulos ya implementados exitosamente.
+Materiales teóricos sobre el Diseño Curricular Modular y la normativa vigente (ej. Resoluciones CFE 118/10 y 254/15).
+Apoyo para la producción de recursos digitales (ej. grabación de videos, infografías).
+Tiempo institucional protegido para el diseño curricular.
+14. ¿Qué tipo de herramientas tecnológicas le gustaría incorporar para enriquecer la experiencia de aprendizaje autónomo en sus módulos? (Respuesta Corta)
+
+Cierre del Formulario
+Muchas gracias por su valiosa colaboración. Sus respuestas nos permitirán avanzar hacia una propuesta curricular modular de mayor calidad y pertinencia para nuestros estudiantes.

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Encuesta Diagnóstica Docente: Módulos EPJA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.5rem;
+            padding: 2.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        .radio-button-group label {
+            cursor: pointer;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            border: 2px solid #e5e7eb;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .radio-button-group input[type="radio"]:checked + label {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+            transform: scale(1.05);
+        }
+        .likert-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: #f9fafb;
+        }
+        .likert-scale input[type="radio"] {
+            display: none;
+        }
+        .likert-scale label {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
+        }
+        .likert-scale input[type="radio"]:checked + label {
+            background-color: #10b981;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">📝 Encuesta Diagnóstica Docente</h1>
+            <p class="text-2xl text-gray-700 font-semibold">Construcción de Módulos EPJA</p>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                Diseñar un módulo en EPJA es como crear un <span class="font-bold text-blue-600">kit de supervivencia</span> para un viaje de aprendizaje. Esta encuesta nos ayudará a entender qué herramientas necesitamos para que todos los kits sean <span class="font-bold text-green-600">exitosos</span>.
+            </p>
+        </header>
+
+        <form id="epja-form" class="space-y-10" action="/submit" method="post">
+
+            <!-- Sección 1: Introducción y Datos 👤 -->
+            <div class="section-card">
+                <h2 class="text-3xl font-bold text-blue-600 mb-6 flex items-center gap-3"><i class="fas fa-user-circle"></i> Sección 1: Tus Datos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label for="espacio_curricular" class="block text-gray-800 font-semibold mb-2">Materia que dictas:</label>
+                        <select id="espacio_curricular" name="espacio_curricular" class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
+                            <option value="">Selecciona tu materia</option>
+                            <option value="matematica">Matemática</option>
+                            <option value="lengua">Lengua y Literatura</option>
+                            <option value="historia">Historia</option>
+                            <option value="geografia">Geografía</option>
+                            <option value="biologia">Biología</option>
+                            <option value="fisica">Física</option>
+                            <option value="quimica">Química</option>
+                            <option value="ingles">Inglés</option>
+                            <option value="informatica">Informática</option>
+                            <option value="contabilidad">Contabilidad</option>
+                            <option value="economia">Economía</option>
+                            <option value="derecho">Derecho</option>
+                            <option value="psicologia">Psicología</option>
+                            <option value="filosofia">Filosofía</option>
+                            <option value="sociologia">Sociología</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="curso" class="block text-gray-800 font-semibold mb-2">Curso:</label>
+                        <select id="curso" name="curso" class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
+                            <option value="">Selecciona el curso</option>
+                            <option value="1a">1° A</option>
+                            <option value="1b">1° B</option>
+                            <option value="2a">2° A</option>
+                            <option value="2b">2° B</option>
+                            <option value="3a">3° A</option>
+                            <option value="3b">3° B</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="nombre_docente" class="block text-gray-800 font-semibold mb-2">Nombre completo:</label>
+                        <input type="text" id="nombre_docente" name="nombre_docente" placeholder="Tu nombre y apellido" class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 2: Estado de Avance Actual 📊 -->
+            <div class="section-card">
+                <h2 class="text-3xl font-bold text-green-600 mb-6 flex items-center gap-3"><i class="fas fa-chart-line"></i> Sección 2: Estado de Avance</h2>
+                <div>
+                    <label class="block text-gray-800 font-semibold mb-4">3. ¿Has iniciado la construcción de tus módulos?</label>
+                    <div class="flex items-center space-x-4 radio-button-group">
+                        <input type="radio" id="ha_iniciado_si" name="ha_iniciado" value="Sí" class="hidden" onchange="handleSkipLogic(this.value)">
+                        <label for="ha_iniciado_si"><i class="fas fa-check-circle"></i> Sí</label>
+                        <input type="radio" id="ha_iniciado_no" name="ha_iniciado" value="No" class="hidden" onchange="handleSkipLogic(this.value)">
+                        <label for="ha_iniciado_no"><i class="fas fa-times-circle"></i> No</label>
+                    </div>
+                </div>
+
+                <div id="pregunta_4" class="mt-8 hidden">
+                    <label class="block text-gray-800 font-semibold mb-4">4. ¿Qué porcentaje de diseño has completado?</label>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 radio-button-group">
+                        <input type="radio" name="porcentaje_completado" id="p_menos_25" value="Menos del 25%" class="hidden"> <label for="p_menos_25">Menos del 25%</label>
+                        <input type="radio" name="porcentaje_completado" id="p_25_50" value="25% - 50%" class="hidden"> <label for="p_25_50">25% - 50%</label>
+                        <input type="radio" name="porcentaje_completado" id="p_51_75" value="51% - 75%" class="hidden"> <label for="p_51_75">51% - 75%</label>
+                        <input type="radio" name="porcentaje_completado" id="p_mas_75" value="Más del 75%" class="hidden"> <label for="p_mas_75">Más del 75%</label>
+                        <input type="radio" name="porcentaje_completado" id="p_listo" value="Diseño completo" class="hidden"> <label for="p_listo">¡Listo!</label>
+                    </div>
+                </div>
+
+                <div id="pregunta_5" class="mt-8 hidden">
+                    <label class="block text-gray-800 font-semibold mb-4">5. ¿Cuál es la principal razón para no haber comenzado?</label>
+                    <div class="space-y-3">
+                        <div><input type="radio" name="razon_no_inicio" value="Falta de claridad"> <label>Falta de claridad en la metodología.</label></div>
+                        <div><input type="radio" name="razon_no_inicio" value="Falta de tiempo"> <label>Falta de tiempo/carga de trabajo.</label></div>
+                        <div><input type="radio" name="razon_no_inicio" value="Falta de recursos"> <label>Falta de recursos o ejemplos.</label></div>
+                        <div><input type="radio" name="razon_no_inicio" value="Incertidumbre de contenidos"> <label>Incertidumbre sobre contenidos prioritarios.</label></div>
+                        <div>
+                            <input type="radio" name="razon_no_inicio" value="Otros"> <label>Otros:</label>
+                            <input type="text" name="razon_no_inicio_otros" placeholder="Cuéntanos un poco más..." class="w-full mt-2 px-4 py-2 rounded-xl border-2 border-gray-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección 3: Conocimiento Metodológico 🧠 -->
+            <div class="section-card">
+                <h2 class="text-3xl font-bold text-indigo-600 mb-6 flex items-center gap-3"><i class="fas fa-brain"></i> Sección 3: Metodología</h2>
+                <div class="mb-8">
+                    <label class="block text-gray-800 font-semibold mb-4">6. ¿Cuán preparado/a te sientes para diseñar los módulos?</label>
+                    <div class="likert-scale">
+                        <span>Poco</span>
+                        <input type="radio" name="preparado" id="prep_1" value="1"><label for="prep_1">1</label>
+                        <input type="radio" name="preparado" id="prep_2" value="2"><label for="prep_2">2</label>
+                        <input type="radio" name="preparado" id="prep_3" value="3"><label for="prep_3">3</label>
+                        <input type="radio" name="preparado" id="prep_4" value="4"><label for="prep_4">4</label>
+                        <input type="radio" name="preparado" id="prep_5" value="5"><label for="prep_5">5</label>
+                        <span>Mucho</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-gray-800 font-semibold mb-4">7. ¿Sabes cómo estimar la carga horaria de trabajo del estudiante?</label>
+                    <div class="flex flex-col space-y-3 radio-button-group">
+                        <input type="radio" name="estimar_carga_horaria" id="ch_si" value="Sí" class="hidden"> <label for="ch_si">Sí, conozco la metodología.</label>
+                        <input type="radio" name="estimar_carga_horaria" id="ch_idea" value="Tengo una idea general" class="hidden"> <label for="ch_idea">Tengo una idea, pero necesito más detalles.</label>
+                        <input type="radio" name="estimar_carga_horaria" id="ch_no" value="No" class="hidden"> <label for="ch_no">No, desconozco cómo hacerlo.</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-800 font-semibold mb-4">8. ¿Conoces y aplicas metodologías como ABP en tus diseños?</label>
+                    <div class="flex flex-col space-y-3 radio-button-group">
+                        <input type="radio" name="metodologias_epja" id="met_si" value="Sí, las uso como eje" class="hidden"> <label for="met_si">Sí, son el eje central de mi diseño.</label>
+                        <input type="radio" name="metodologias_epja" id="met_teoria" value="Conozco la teoría" class="hidden"> <label for="met_teoria">Conozco la teoría, pero no la he implementado.</label>
+                        <input type="radio" name="metodologias_epja" id="met_no" value="Necesito capacitación" class="hidden"> <label for="met_no">Necesito capacitación sobre estas metodologías.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 5: Necesidades y Apoyo 🙏 -->
+            <div class="section-card">
+                <h2 class="text-3xl font-bold text-red-600 mb-6 flex items-center gap-3"><i class="fas fa-hands-helping"></i> Sección 5: Necesidades y Apoyo</h2>
+                <div class="mb-8">
+                    <label class="block text-gray-800 font-semibold mb-4">13. ¿Qué tipo de apoyo o recursos consideras más necesarios?</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Asesoramiento individual" class="h-5 w-5 rounded"> <label class="ml-3">Asesoramiento metodológico individual.</label></div>
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Talleres de capacitación" class="h-5 w-5 rounded"> <label class="ml-3">Talleres de capacitación en estrategias EPJA.</label></div>
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Ejemplos y plantillas" class="h-5 w-5 rounded"> <label class="ml-3">Acceso a ejemplos o plantillas.</label></div>
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Materiales teóricos" class="h-5 w-5 rounded"> <label class="ml-3">Materiales teóricos y normativa.</label></div>
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Apoyo en recursos digitales" class="h-5 w-5 rounded"> <label class="ml-3">Apoyo para producción de recursos digitales.</label></div>
+                        <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Tiempo institucional" class="h-5 w-5 rounded"> <label class="ml-3">Tiempo institucional protegido para diseño.</label></div>
+                    </div>
+                </div>
+                <div>
+                    <label for="herramientas_tecnologicas" class="block text-gray-800 font-semibold mb-2">14. ¿Qué herramientas tecnológicas te gustaría incorporar?</label>
+                    <textarea id="herramientas_tecnologicas" name="herramientas_tecnologicas" rows="4" placeholder="Ej: videos interactivos, podcasts, apps de simulación..." class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition"></textarea>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <button type="submit" class="bg-blue-600 text-white font-bold py-4 px-12 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 shadow-lg">
+                    Enviar mis Respuestas ✨
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleSkipLogic(value) {
+            const pregunta4 = document.getElementById('pregunta_4');
+            const pregunta5 = document.getElementById('pregunta_5');
+            if (value === 'Sí') {
+                pregunta4.classList.remove('hidden');
+                pregunta5.classList.add('hidden');
+            } else if (value === 'No') {
+                pregunta4.classList.add('hidden');
+                pregunta5.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
