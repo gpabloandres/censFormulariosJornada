@@ -80,9 +80,8 @@
                 <h2 class="text-3xl font-bold text-blue-600 mb-6 flex items-center gap-3"><i class="fas fa-user-circle"></i> Sección 1: Tus Datos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <label for="espacio_curricular" class="block text-gray-800 font-semibold mb-2">Materia que dictas:</label>
-                        <select id="espacio_curricular" name="espacio_curricular" class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
-                            <option value="">Selecciona tu materia</option>
+                        <label for="espacio_curricular" class="block text-gray-800 font-semibold mb-2">Materias que dictas (mantén presionado Ctrl para seleccionar varias):</label>
+                        <select id="espacio_curricular" name="espacio_curricular" class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required multiple>
                             <option value="biologias">Biología</option>
                             <option value="conmutacion">Conmutación</option>
                             <option value="educacionparalasalud">Educación para la Salud</option>
@@ -201,7 +200,7 @@
                     </div>
                 </div>
                 <div>
-                    <label class="block text-gray-800 font-semibold mb-4">8. ¿Conoces y aplicas metodologías como ABP en tus diseños?</label>
+                    <label class="block text-gray-800 font-semibold mb-4">8. ¿Conoces y aplicas metodologías como Aprendizaje Basado en Proyectos (ABP) o la problematización del conocimiento, que deben integrar el diseño modular?</label>
                     <div class="flex flex-col space-y-3 radio-button-group">
                         <input type="radio" name="metodologias_epja" id="met_si" value="Sí, las uso como eje" class="hidden"> <label for="met_si">Sí, son el eje central de mi diseño.</label>
                         <input type="radio" name="metodologias_epja" id="met_teoria" value="Conozco la teoría" class="hidden"> <label for="met_teoria">Conozco la teoría, pero no la he implementado.</label>
@@ -210,11 +209,35 @@
                 </div>
             </div>
 
+            <!-- Sección 4: Concepción de los Módulos (Formato, Diseño y Contenido) 🎨 -->
+            <div class="section-card">
+                <h2 class="text-3xl font-bold text-yellow-600 mb-6 flex items-center gap-3"><i class="fas fa-paint-brush"></i> Sección 4: Concepción del Módulo</h2>
+                <div class="mb-8">
+                    <label class="block text-gray-800 font-semibold mb-4">9. En cuanto al FORMATO del módulo, ¿cuál de los siguientes enfoques considera más efectivo?</label>
+                    <div class="flex flex-col space-y-3 radio-button-group">
+                        <input type="radio" name="formato_modulo" id="formato_texto" value="Documento de texto tradicional" class="hidden"> <label for="formato_texto">Documento de texto (PDF/Word).</label>
+                        <input type="radio" name="formato_modulo" id="formato_digital" value="Material didáctico interactivo/digital" class="hidden"> <label for="formato_digital">Material interactivo/digital (web, videos, etc.).</label>
+                        <input type="radio" name="formato_modulo" id="formato_mixto" value="Formato mixto" class="hidden"> <label for="formato_mixto">Formato mixto (impreso y digital).</label>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-gray-800 font-semibold mb-4">10. Respecto al DISEÑO PEDAGÓGICO, ¿cuál es el principal valor agregado de un módulo?</label>
+                    <div class="flex flex-col space-y-3 radio-button-group">
+                        <input type="radio" name="diseno_pedagogico" id="diseno_secuencia" value="Ofrecer una secuencia articulada" class="hidden"> <label for="diseno_secuencia">Ofrecer una secuencia articulada con otras disciplinas.</label>
+                        <input type="radio" name="diseno_pedagogico" id="diseno_experiencia" value="Articular con la experiencia laboral" class="hidden"> <label for="diseno_experiencia">Articular con la experiencia laboral y saberes previos.</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="contenido_prioritario" class="block text-gray-800 font-semibold mb-2">11. ¿Qué entiende por "Contenido Prioritario" en el contexto de la EPJA?</label>
+                    <textarea id="contenido_prioritario" name="contenido_prioritario" rows="4" placeholder="Describa brevemente su concepto..." class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"></textarea>
+                </div>
+            </div>
+
             <!-- Sección 5: Necesidades y Apoyo 🙏 -->
             <div class="section-card">
                 <h2 class="text-3xl font-bold text-red-600 mb-6 flex items-center gap-3"><i class="fas fa-hands-helping"></i> Sección 5: Necesidades y Apoyo</h2>
                 <div class="mb-8">
-                    <label class="block text-gray-800 font-semibold mb-4">13. ¿Qué tipo de apoyo o recursos consideras más necesarios?</label>
+                    <label class="block text-gray-800 font-semibold mb-4">12. ¿Qué tipo de apoyo o recursos consideras más necesarios?</label>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Asesoramiento individual" class="h-5 w-5 rounded"> <label class="ml-3">Asesoramiento metodológico individual.</label></div>
                         <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Talleres de capacitación" class="h-5 w-5 rounded"> <label class="ml-3">Talleres de capacitación en estrategias EPJA.</label></div>
@@ -224,9 +247,18 @@
                         <div class="flex items-center"><input type="checkbox" name="apoyo_recursos" value="Tiempo institucional" class="h-5 w-5 rounded"> <label class="ml-3">Tiempo institucional protegido para diseño.</label></div>
                     </div>
                 </div>
-                <div>
-                    <label for="herramientas_tecnologicas" class="block text-gray-800 font-semibold mb-2">14. ¿Qué herramientas tecnológicas te gustaría incorporar?</label>
+                <div class="mb-8">
+                    <label for="herramientas_tecnologicas" class="block text-gray-800 font-semibold mb-2">13. ¿Qué herramientas tecnológicas te gustaría incorporar?</label>
                     <textarea id="herramientas_tecnologicas" name="herramientas_tecnologicas" rows="4" placeholder="Ej: videos interactivos, podcasts, apps de simulación..." class="w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition"></textarea>
+                </div>
+                <div>
+                    <label class="block text-gray-800 font-semibold mb-4">14. ¿Adapta sus propuestas a estudiantes ante situaciones laborales personales?</label>
+                    <div class="flex flex-col space-y-3 radio-button-group">
+                        <input type="radio" name="adaptacion_laboral" id="al_si" value="Sí, siempre" class="hidden"> <label for="al_si">Sí, siempre</label>
+                        <input type="radio" name="adaptacion_laboral" id="al_aveces" value="A veces" class="hidden"> <label for="al_aveces">A veces</label>
+                        <input type="radio" name="adaptacion_laboral" id="al_no" value="No" class="hidden"> <label for="al_no">No</label>
+                        <input type="radio" name="adaptacion_laboral" id="al_no_considerado" value="No lo había considerado" class="hidden"> <label for="al_no_considerado">No lo había considerado</label>
+                    </div>
                 </div>
             </div>
 

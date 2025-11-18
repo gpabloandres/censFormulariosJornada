@@ -97,10 +97,10 @@ def init_db():
                 metodologias_epja TEXT,
                 formato_modulo TEXT,
                 diseno_pedagogico TEXT,
-                importancia_ejes_transversales TEXT,
                 contenido_prioritario TEXT,
                 apoyo_recursos TEXT,
-                herramientas_tecnologicas TEXT
+                herramientas_tecnologicas TEXT,
+                adaptacion_laboral TEXT
             )
         ''')
         db.commit()
@@ -114,7 +114,7 @@ def home():
 @app.route('/submit', methods=['POST'])
 def submit():
     # Recibe los datos del formulario de diagnóstico EPJA
-    espacio_curricular = request.form.get('espacio_curricular')
+    espacio_curricular = ', '.join(request.form.getlist('espacio_curricular'))
     curso = request.form.get('curso')
     nombre_docente = request.form.get('nombre_docente')
     ha_iniciado = request.form.get('ha_iniciado')
@@ -126,10 +126,10 @@ def submit():
     metodologias_epja = request.form.get('metodologias_epja')
     formato_modulo = request.form.get('formato_modulo')
     diseno_pedagogico = request.form.get('diseno_pedagogico')
-    importancia_ejes_transversales = request.form.get('importancia_ejes')
     contenido_prioritario = request.form.get('contenido_prioritario')
     apoyo_recursos = ', '.join(request.form.getlist('apoyo_recursos'))
     herramientas_tecnologicas = request.form.get('herramientas_tecnologicas')
+    adaptacion_laboral = request.form.get('adaptacion_laboral')
 
     # Guarda los datos en la nueva tabla
     db = get_db()
@@ -139,8 +139,8 @@ def submit():
             fecha, espacio_curricular, curso, nombre_docente, ha_iniciado,
             porcentaje_completado, razon_no_inicio, razon_no_inicio_otros,
             preparado_diseno, estimar_carga_horaria, metodologias_epja,
-            formato_modulo, diseno_pedagogico, importancia_ejes_transversales,
-            contenido_prioritario, apoyo_recursos, herramientas_tecnologicas
+            formato_modulo, diseno_pedagogico, contenido_prioritario, 
+            apoyo_recursos, herramientas_tecnologicas, adaptacion_laboral
         )
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
@@ -157,10 +157,10 @@ def submit():
         metodologias_epja,
         formato_modulo,
         diseno_pedagogico,
-        importancia_ejes_transversales,
         contenido_prioritario,
         apoyo_recursos,
-        herramientas_tecnologicas
+        herramientas_tecnologicas,
+        adaptacion_laboral
     ))
     db.commit()
     return redirect(url_for('thank_you'))
